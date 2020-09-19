@@ -1,0 +1,30 @@
+
+<ion-header>
+  <ion-toolbar>
+
+    <ion-button slot="end" (click)="salir()"><ion-icon name="close-outline"></ion-icon></ion-button>
+
+    <ion-title>Detalles de Comic ID: {{idComic}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+
+  <ion-list>
+      <ion-item >
+           <ion-thumbnail slot="start">
+              <ion-img [src]="url"></ion-img>
+           </ion-thumbnail>
+          <ion-label>
+            <h3><strong>Titulo:</strong>{{comic.title}}</h3>
+            <h3><strong>Fecha de lanzamiento:</strong>{{comic.dates[0].date}}</h3>
+            <h3><strong>Páginas:</strong>{{comic.pageCount}}</h3>
+            <h3 *ngIf="comic.description"><strong>Descripción:</strong>{{comic.description}}</h3>
+            <h3 *ngIf="personajes"><strong>Personajes:</strong>{{comic.description}}</h3>
+          </ion-label>
+      </ion-item>
+
+  </ion-list>    
+
+</ion-content>
+
